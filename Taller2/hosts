@@ -2,13 +2,13 @@ all:
   children:
     servidores_web:
       hosts:
-        nombre_de_la_primera_maquina: sri-t2-web
+        sri-t2-web:
           ansible_ssh_host: 192.168.122.185
           ansible_ssh_user: usuario
           ansible_ssh_private_key_file: /home/arantxa/.ssh/id_rsa
     servidores_bd:
       hosts:
-        nombre_de_la_segunda_maquina: sri-t2-bd
+        sri-t2-bd:
           ansible_ssh_host: 192.168.122.217
           ansible_ssh_user: usuario
           ansible_ssh_private_key_file: /home/arantxa/.ssh/id_rsa
