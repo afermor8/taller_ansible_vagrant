@@ -8,11 +8,11 @@
   mysql_db: name=wordpress_bd state=present
 
 - name: create user mysql wordpress
-  mysql_user: name=wordpress_user host=debianprueba password=asdasd priv=*.*:ALL,GRANT
+  mysql_user: name=wordpress_user host=localhost password=asdasd priv=*.*:ALL,GRANT
   with_items:
     - localhost
 
 - name: mariadb listen in all interfaces
-  lineinfile: dest=/etc/mysql/mariadb.conf.d/50-server.cnf regexp="^bind-address            = 127.0.0.1" line="bind-address            = 0.0.0.0" state=present
+  lineinfile: dest=/etc/mysql/mariadb.conf.d/60-server.cnf regexp="^bind-address            = 127.0.0.1" line="bind-address            = 0.0.0.0" state=present
   notify:
     - restart mariadb
