@@ -13,6 +13,6 @@
     - localhost
 
 - name: mariadb listen in all interfaces
-  lineinfile: dest=/etc/mysql/mariadb.conf.d/60-server.cnf regexp="^bind-address            = 127.0.0.1" line="bind-address            = 0.0.0.0" state=present
+  lineinfile: dest=/etc/mysql/mariadb.conf.d/50-server.cnf regexp="^bind-address            = 127.0.0.1" line="bind-address            = 0.0.0.0" state=present
   notify:
     - restart mariadb
