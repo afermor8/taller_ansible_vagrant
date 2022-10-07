@@ -20,7 +20,7 @@
 - name: "Copiar fichero de configuración y reiniciar el servicio"
   copy:
     src: etc/apache2/ports.conf
-    dest: /etc/apache2/ports.conf
+    dest: /etc/apache2/puertos.conf
     owner: root
     group: root
     mode: '0644'
