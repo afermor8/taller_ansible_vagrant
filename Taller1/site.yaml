@@ -13,7 +13,7 @@
       # Copia un fichero a la máquina remota
     - name: "Copiar fichero a la máquina remota"
       copy:
-        src: /home/arantxa/taller_ansible_vagrant/Taller1/files/foo.conf
+        src: /home/arantxa/git/taller_ansible_vagrant/Taller1/files/foo.conf
         dest: /etc/foo.conf
         owner: root
         group: root
@@ -22,7 +22,7 @@
       # Copia un template a un fichero
     - name: "Copiar un tamplate a un fichero de la máquina remota"
       template: 
-        src: /home/arantxa/taller_ansible_vagrant/Taller1/template/index.j2
+        src: /home/arantxa/git/taller_ansible_vagrant/Taller1/template/index.j2
         dest: /var/www/html/index.html
         owner: www-data
         group: www-data
