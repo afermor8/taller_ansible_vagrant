@@ -26,8 +26,4 @@ config.vm.synced_folder ".", "/vagrant", disabled: true
       :libvirt__forward_mode => "veryisolated"
   end
 
-  config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "/home/arantxa/git/taller_ansible_vagrant/practica/ansible/site.yaml"
-  end
-
 end
