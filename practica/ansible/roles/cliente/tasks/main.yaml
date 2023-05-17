@@ -1,0 +1,9 @@
+- name: Configuración de las interfaces de red de cliente
+  template:
+    src: cliente-interfaces
+    dest: /etc/network/interfaces
+    owner: root
+    group: root
+    mode: "0644"
+  notify:
+    - Reiniciar networking

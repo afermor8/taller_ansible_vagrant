@@ -1,0 +1,4 @@
+red_privada: 10.0.0.0/24
+ip_router: 10.0.0.1
+ip_router2: 192.168.1.172
+ip_cliente: 10.0.0.2
