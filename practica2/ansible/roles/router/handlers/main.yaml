@@ -1,4 +1,4 @@
 - name: Reiniciar networking
   service:
     name=networking
-    state=started
+    state=restarted

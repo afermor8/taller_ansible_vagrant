@@ -1,0 +1,8 @@
+- name: Ensure system is updated
+  apt: update_cache=yes upgrade=yes
+
+- name: Copiar clave pública SSH
+  authorized_key:
+    user: vagrant
+    state: present
+    key: "{{ lookup('file', '/home/arantxa/.ssh/id_rsa.pub') }}"
